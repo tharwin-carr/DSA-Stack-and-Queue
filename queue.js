@@ -11,7 +11,7 @@ class Queue {
         this.first = null;
         this.last = null;
     }
-    enqueue(data) {
+    enqueue(data) { // O(1)
         const node = new _Node(data);
 
         if (this.first === null) {
@@ -25,7 +25,7 @@ class Queue {
         //make the new node the last item on the queue
         this.last = node;
     }
-    dequeue() {
+    dequeue() { // O(1)
         //if the queue is empty, there is nothing to remove
         if (this.first === null) {
             return;
@@ -39,4 +39,3 @@ class Queue {
         return node.value;
     }
 }
-
